@@ -1,0 +1,31 @@
+Esta carpeta presenta el siguiente contenido:
+
+- Documento en formato PDF titulado "Buscaminas" --> presenta toda la documentación del desarrollo del problema.
+- Documento en formato XLSX titulado "Anexo-Matriz de Datos" --> contiene todos los datos recabados en las distintas pruebas que se han llevado a cabo para obtener los resultados del rendimiento que presenta nuestro problema.
+- Carpeta "Código Fuente" --> contiene 3 archivos:
+	- probBuscaminas.py: contiene los distintos métodos para crear nuestra matriz, grafo, modelo, obtención de la probabilidad, etc...
+	- probabilidad.py: contiene la implementación de la interfaz para poder ejecutar la solución planteada al problema
+	- juego.py: código implementado del juego del buscaminas, para que se ejecute simultáneamente con la solución del problema, para mayor comodidad del jugador y no tener que usar aplicaciones externas.
+
+**Notas a tener en cuenta**
+
+Para ejecutar estos ficheros, se ha de configurar en un entorno de trabajo que soporte python, los siguientes requisitos:
+	- un nuevo proyecto en el entorno de trabajo
+	- importar en el proyecto los ficheros que adjuntaremos
+	- el arranque del fichero "probabilidad.py" y "juego.py". Ambos se pueden ejecutar simultáneamente, pero en el caso que se desee usar una aplicación externa para jugar al buscaminas, sólo ha de ejecutar "probabilidad.py"
+
+**Instrucciones**
+
+En la interfaz de usuario se deja indicado la manera en cómo se ha de rellenar , no obstante se volverá a indicar:
+
+	- Introducir nº de filas, columnas y minas que contendrá el tablero con el que juguemos.
+	- Clickear en siguiente. Si no se introduce ningún valor, no se nos permitirá continuar con el proceso.
+	- Nos aparecerá otra ventana para poder añadir evidencias a una lista.
+		>> Añadir evidencias: para añadir una evidencia tendrá que indicar el nodo (casilla) sin descubrir, nº de casillas vecinas (colindantes) y la suma de la información que dan las casillas vecinas.
+		Se tendrán que añadir tantas evidencias como nodos sin descubrir tengamos.
+		>> Modificar evidencias: para modificar una evidencia, se tendrá que escribir el nodo (casilla) que queremos modificar y a su vez escribir el nº de casillas vecinas y la suma de la información que las contiene, luego se seleccionará en la lista aquella que quiera modificar con los nuevos datos y hará click en "Modificar".
+		>> Eliminar evidencias: se seleccionará de la lista la evidencia que se quiere borrar y se hará click en "Borrar"
+
+	- Una vez que este satisfecho con el contenido de la lista, hará click en "Aceptar" y en la consola del entorno de trabajo donde ejecuta el fichero "probabilidad.py", podrá ver la casilla con menor probabilidad de obtener mina.
+	- Cada vez que desvela una casilla en el juego, ésta deberá ser borrada de la lista de evidencias y se actualizarán las casillas vecinas (colindantes) que se vean afectadas.
+	- Una vez que la partida haya acabado (bien por perder, bien por ganar), se hará click en "He terminado. Finalizar" y se cerrará la interfaz.
